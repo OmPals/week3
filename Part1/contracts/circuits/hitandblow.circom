@@ -95,8 +95,10 @@ template HitAndBlow() {
     poseidon.inputs[3] <== privSolnC;
     poseidon.inputs[4] <== privSolnD;
 
+
     solnHashOut <== poseidon.out;
+    log(solnHashOut);
     pubSolnHash === solnHashOut;
  }
 
- component main {public [pubGuessA, pubGuessB, pubGuessC, pubGuessD, pubNumHit, pubNumBlow, pubSolnHash]} = HitAndBlow();
+//  component main {public [pubGuessA, pubGuessB, pubGuessC, pubGuessD, pubNumHit, pubNumBlow, pubSolnHash]} = HitAndBlow();
